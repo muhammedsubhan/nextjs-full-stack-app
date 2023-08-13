@@ -19,7 +19,7 @@ const Home = () => {
           <Image
             src={Hero}
             alt="hero-image"
-            className="w-[100%] h-[500px] bg-cover"
+            className="w-[100%] h-[500px] image-move object-contain"
           />
         </div>
       </div>

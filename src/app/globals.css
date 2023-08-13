@@ -38,3 +38,17 @@ a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.image-move {
+  animation: move 3s infinite ease alternate;
+}
+
+@keyframes move {
+  from {
+    transform: translateY(-15px) ;
+  }
+
+  to {
+    transform: translateY(0px) scale(1.03);
+  }
+}
