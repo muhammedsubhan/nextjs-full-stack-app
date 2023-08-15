@@ -45,10 +45,33 @@ a {
 
 @keyframes move {
   from {
-    transform: translateY(-15px) ;
+    transform: translateY(-15px);
   }
 
   to {
     transform: translateY(0px) scale(1.03);
   }
+}
+
+.item-image:nth-child(1) {
+  background: url("/illustration.png");
+}
+.item-image:nth-child(2) {
+  background: url("/websites.jpg");
+}
+.item-image:nth-child(3) {
+  background: url("/apps.jpg");
+}
+
+.item-image {
+  background-size: cover !important;
+  transition: all 0.3s ease;
+}
+
+.item-image:hover {
+  opacity: 0.4;
+}
+
+.item-reverse:nth-child(2n+1) {
+  flex-direction: row-reverse;
 }
