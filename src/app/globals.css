@@ -72,6 +72,20 @@ a {
   opacity: 0.4;
 }
 
-.item-reverse:nth-child(2n+1) {
+.item-reverse:nth-child(2n + 1) {
   flex-direction: row-reverse;
+}
+
+.theme {
+  transition: 1s all ease;
+}
+
+.light {
+  background-color: white;
+  color: #111;
+}
+
+.dark {
+  background-color: #111;
+  color: #bbb;
 }

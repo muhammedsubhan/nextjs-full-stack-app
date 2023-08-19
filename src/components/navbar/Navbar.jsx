@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import React from "react";
+import DarkMode from "../DarkMode/DarkMode";
 
 const Navbar = () => {
   const links = [
@@ -41,7 +42,8 @@ const Navbar = () => {
         <Link href="/" className="font-semibold text-2xl">
           Lamamia
         </Link>
-        <div>
+        <div className="flex items-center">
+          <DarkMode />
           {links.map((link) => {
             return (
               <Link key={link.id} href={link.url} className="ml-6">
@@ -49,7 +51,9 @@ const Navbar = () => {
               </Link>
             );
           })}
-          <button className="ml-3 py-[3px] px-3 border-none bg-green-400 text-white rounded-md">LogOut</button>
+          <button className="ml-3 py-[3px] px-3 border-none bg-green-400 text-white rounded-md">
+            LogOut
+          </button>
         </div>
       </div>
     </>
