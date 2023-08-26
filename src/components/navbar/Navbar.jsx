@@ -2,8 +2,11 @@
 import Link from "next/link";
 import React from "react";
 import DarkMode from "../DarkMode/DarkMode";
+import { signOut, useSession } from "next-auth/react";
 
 const Navbar = () => {
+  const session = useSession();
+
   const links = [
     {
       id: 1,
@@ -51,9 +54,14 @@ const Navbar = () => {
               </Link>
             );
           })}
-          <button className="ml-3 py-[3px] px-3 border-none bg-green-400 text-white rounded-md">
-            LogOut
-          </button>
+          {session.status === "authenticated" && (
+            <button
+              className="ml-3 py-[3px] px-3 border-none bg-green-400 text-white rounded-md"
+              onClick={signOut}
+            >
+              LogOut
+            </button>
+          )}
         </div>
       </div>
     </>

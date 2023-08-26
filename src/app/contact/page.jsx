@@ -2,6 +2,11 @@ import Button from "@/components/Button/Button";
 import Image from "next/image";
 import React from "react";
 
+export const metadata = {
+  title: "NextJS Contact Page",
+  description: "This is contact page",
+};
+
 const Contact = () => {
   return (
     <>
